@@ -1,0 +1,16 @@
+cat > ~/sim_ws/src/robot_description/materials/scripts/apriltag.material << 'EOF'
+material AprilTag/ID0
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture /home/sugant/sim_ws/install/robot_description/share/robot_description/materials/textures/apriltag_36h11_id0.png
+        scale 1.0 1.0
+      }
+    }
+  }
+}
+EOF

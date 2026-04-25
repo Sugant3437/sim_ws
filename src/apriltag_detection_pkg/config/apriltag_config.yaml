@@ -1,0 +1,34 @@
+# apriltag_config.yaml
+# Configuration for the overhead camera AprilTag localizer
+
+apriltag_localizer:
+  ros__parameters:
+    # Topic names
+    camera_topic: /overhead_camera/image_raw
+    camera_info_topic: /overhead_camera/camera_info
+
+    # Target AprilTag ID on the robot
+    tag_id: 0
+
+    # Tag family (tag36h11 is the default/most robust)
+    tag_family: tag36h11
+
+    # Physical tag size in metres (10cm tag)
+    tag_size: 0.10
+
+    # Camera mounting position in map frame (metres)
+    camera_x: 3.0
+    camera_y: 3.0
+    camera_z: 2.55
+
+    # Height of AprilTag above ground (robot base + platform)
+    tag_z: 0.16
+
+    # Detection parameters
+    publish_rate: 30.0
+
+    # Detector tuning
+    quad_decimate: 2.0    # Speed vs accuracy tradeoff (1.0 = full res, slower)
+    quad_sigma: 0.0       # Gaussian blur before quad detection
+    refine_edges: 1       # Refine edge positions
+    decode_sharpening: 0.25
