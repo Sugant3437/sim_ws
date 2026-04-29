@@ -28,8 +28,8 @@ def generate_launch_description():
 
     # ── Launch args ──
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
-    robot_x = LaunchConfiguration('robot_x', default='1.0')
-    robot_y = LaunchConfiguration('robot_y', default='1.0')
+    robot_x = LaunchConfiguration('robot_x', default='1.5')
+    robot_y = LaunchConfiguration('robot_y', default='1.5')
     robot_yaw = LaunchConfiguration('robot_yaw', default='0.0')
 
     # ── Process URDF via xacro ──
@@ -81,8 +81,8 @@ def generate_launch_description():
 
     return LaunchDescription([
         DeclareLaunchArgument('use_sim_time', default_value='true'),
-        DeclareLaunchArgument('robot_x', default_value='1.0'),
-        DeclareLaunchArgument('robot_y', default_value='1.0'),
+        DeclareLaunchArgument('robot_x', default_value='1.5'),
+        DeclareLaunchArgument('robot_y', default_value='1.5'),
         DeclareLaunchArgument('robot_yaw', default_value='0.0'),
 
         gazebo,
